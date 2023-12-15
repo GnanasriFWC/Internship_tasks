@@ -4,8 +4,8 @@ const int dataPinD2 = 3;      // Connect to Pin 10 (D2) of SN74ALS74AN
 const int dataPinD3 = 8;
 const int dataPinD4 = 9;
 const int clockPin1 = 4;       // Connect to Pin 9 (CLK) of SN74ALS74AN
-const int setPin = 5;
-const int resetPin = 6;
+//const int setPin = 5;
+//const int resetPin = 6;
 const int qOutputPinQ1 = 7;   // Connect to Pin 7 (Q1) of SN74ALS74AN
 const int qOutputPinQ2 = 13;  // Connect to Pin 13 (Q2) of SN74ALS74AN
 const int qOutputPinQ3 = 10;
@@ -25,8 +25,8 @@ void setup() {
   pinMode(dataPinD4, OUTPUT);
   pinMode(clockPin1, OUTPUT);
   pinMode(clockPin2, OUTPUT);
-  pinMode(setPin, OUTPUT);
-  pinMode(resetPin, OUTPUT);
+  //pinMode(setPin, OUTPUT);
+  //pinMode(resetPin, OUTPUT);
   pinMode(qOutputPinQ1, INPUT);  // Q1 is an output from the flip-flop
   pinMode(qOutputPinQ2, INPUT);  // Q2 is an output from the flip-flop
   pinMode(qOutputPinQ3, INPUT); 
@@ -41,8 +41,8 @@ void setup() {
 
 void inp_7447(int D1,int D2, int D3,int D4){
 
-  digitalWrite(setPin, HIGH);
-  digitalWrite(resetPin, HIGH);
+  //digitalWrite(setPin, HIGH);
+  //digitalWrite(resetPin, HIGH);
   
   digitalWrite(dataPinD1, D1);
   digitalWrite(dataPinD2, D2);  // Set D2 to LOW for the first clock pulse
@@ -53,7 +53,7 @@ void inp_7447(int D1,int D2, int D3,int D4){
   digitalWrite(clockPin1, LOW);
   delay(10);
   digitalWrite(clockPin1, HIGH);
-
+    
   // Provide a clock pulse (transition from LOW to HIGH)
   digitalWrite(clockPin2, LOW);
   delay(10);
@@ -70,13 +70,21 @@ void inp_7447(int D1,int D2, int D3,int D4){
   digitalWrite(A2, q3Value);
   digitalWrite(A3, q4Value);
 
+  Serial.print("Q1: ");
+  Serial.println(q1Value);
+  Serial.print("  Q2: ");
+  Serial.println(q2Value);
+  Serial.print("Q3: ");
+  Serial.println(q3Value);
+  Serial.print("  Q4: ");
+  Serial.println(q4Value);
 }
 
 void loop() {
   for (int i = 0; i < 10; ++i) {
     // Set data inputs
     
-    // Set the binary v                                                                  alue on D1, D2, D3, D4
+    // Set the binary value on D1, D2, D3, D4
     D1 = i % 2;
     D2 = (i / 2) % 2;
     D3 = (i / 4) % 2;
