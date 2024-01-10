@@ -7,13 +7,13 @@
 5) After running the above command, Go to: **file Manager --> Other Locations --> Computer --> root** . Copy the files **Symbiflow** and **Pygmy-dev** paste them in **"/desktop/fpga"**
 6) Now download **arch.tar.gz** using this below link and also place it in **/desktop/fpga**:
    ## <pre>https://iith-my.sharepoint.com/:u:/g/personal/gadepall_ee_iith_ac_in/Ebot5QHEYXBAo-7n4hnvJu0B8vMrTIdj_COHJC2cmDY1ww?e=bqDxHI</pre>
-7) Make sure that */desktop/fpga* contains *pygmy-dev, **setup.sh* and *symbiflow* and zip file *arch.tar.gz*<br>
+7) Make sure that **/desktop/fpga** contains **pygmy-dev**, **setup.sh** and **symbiflow** and zip file **arch.tar.gz**<br>
 8) Next:
    At Home:
    <pre>
    sudo apt update -y <br>
    sudo apt upgrade -y<br>
-   sudo apt install openssh-server sshpass build-essential libssl-dev libffi-dev python3-dev bison flex git tcl-dev tcl tcl-tclreadline libreadline-dev  autoconf libtool make automake texinfo pkg-          config libusb-1.0-0 libusb-1.0-0-dev gcc-arm-none-eabi libnewlib-arm-none-eabi telnet python3 apt-utils libxslt-dev cmake curl python3-pip python3-venv -y<br>
+   sudo apt install build-essential libssl-dev libffi-dev python3-dev bison flex git tcl-dev tcl tcl-tclreadline libreadline-dev  autoconf libtool make automake texinfo pkg-config libusb-1.0-0 libusb-1.0-0-dev gcc-arm-none-eabi libnewlib-arm-none-eabi telnet python3 apt-utils libxslt-dev python3-lxml python3-simplejson cmake curl  python3-setuptools python3-pip<br>
    pip3 install gdown lxml simplejson<br>
    sudo apt install openssh-server sshpass<br>
    sudo apt install build-essential libssl-dev libffi-dev python3-dev bison flex git tcl-dev tcl tcl-tclreadline libreadline-dev  autoconf libtool make automake texinfo pkg-config libusb-1.0-0 libusb-1.0-0-dev gcc-arm-none-eabi libnewlib-arm-none-eabi telnet python3 apt-utils libxslt-dev python3-lxml python3-simplejson cmake curl  python3-setuptools python3-pip<br>
